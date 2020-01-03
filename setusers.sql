@@ -1,0 +1,1 @@
+insert into users values (0, 'Alice', false), (1, 'Bob', true), (2, 'Chan', false)

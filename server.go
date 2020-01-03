@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"os"
 )
 
 type User struct{
@@ -37,7 +38,7 @@ func handleGetAll(w http.ResponseWriter, r *http.Request){
 
 func main(){
 	server := http.Server{
-		Addr: ":" + "8090",
+		Addr: ":" + os.Getenv("PORT"),
 	}
 	http.HandleFunc("/", handleRequest)
 	http.HandleFunc("/users/all", handleGetAll)

@@ -9,7 +9,7 @@ import (
 
 type User struct{
 	Id int `json:"id"`
-	Name string `json:"string"`
+	Name string `json:"name"`
 	IsPaid bool `json:"isPaid"`
 }
 
